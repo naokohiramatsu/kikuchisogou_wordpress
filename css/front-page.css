@@ -1,0 +1,507 @@
+/*==============
+ファーストビュー
+================*/
+
+.p-fv {
+  position: relative;
+}
+
+.fv-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+/* キャッチコピー配置 */
+.fv__slogan {
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  color: var(--color-white);
+  font-weight: bold;
+  line-height: 1.4;
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 0 4rem 0 0;
+}
+
+@media (max-width: 767px) {
+  .fv__slogan {
+    padding: 0.625rem;
+    width: 80%;
+  }
+}
+
+/* 青文字 */
+.slogan--blue {
+  font-size: clamp(1.8rem, 3.5vw, 4.5rem);
+  color: var(--color-blue);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+/* 黒文字 */
+.slogan--bk {
+  font-size: clamp(2rem, 4vw, 5.2rem);
+  color: var(--color-bk);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+/* SPの時だけ改行 */
+/* デフォルト：改行しない */
+.p-fv .sp-br {
+  display: none;
+}
+
+/* SP時だけ：改行として有効化（fv内限定） */
+@media (max-width: 767px) {
+  .p-fv .sp-br {
+    display: block;
+    height: 0;
+  }
+}
+/*=================
+about当社について
+================== */
+
+.about__description--txt {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .about__description--txt {
+    font-size: 1.6rem;
+  }
+}
+.about {
+  padding-bottom: 8rem;
+}
+
+/* PC用 */
+.about__description__wrapper.pc_only {
+  margin-top: 5rem;
+}
+
+/* SP用 */
+@media (max-width: 767px) {
+  .about__description__wrapper.sp_only {
+    margin-top: 2rem;
+  }
+}
+
+/*=================
+Services 事業内容
+================== */
+#services {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: var(--color-beige);
+}
+@media (max-width: 767px) {
+  #services {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.p-services {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.img-box {
+  width: 100%;
+}
+.p-services__img {
+  padding-bottom: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+@media (max-width: 767px) {
+  .p-services__img {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+.service-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-item img {
+  width: 100%;
+  display: block;
+}
+
+/* 黒フィルター */
+.service-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* テキスト */
+.service-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
+  text-align: center;
+  padding: 1rem;
+  letter-spacing: 0.05em;
+}
+
+/* 左上 ナンバー */
+.service-number {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-white);
+  font-size: clamp(1.4rem, 2vw, 2.4rem);
+  font-weight: 800;
+  z-index: 2;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.service-number::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.6rem;
+  transform: translateX(-50%);
+  width: 180%;
+  height: 1px;
+  background: var(--color-white);
+}
+.services-btn {
+  text-align: center;
+}
+/*=================
+Works 施工実績
+================== */
+
+.works_wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#works .works_wrapper--text {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 30%;
+}
+
+#works .works_wrapper-media {
+  flex: 0 0 70%;
+}
+
+#works .section__ttl {
+  margin-bottom: 0;
+}
+
+#works .section_text {
+  margin: auto 0;
+  line-height: 1.5;
+  font-size: 2rem;
+}
+
+#works .works-btn {
+  margin-top: auto;
+}
+
+#works .works_wrapper-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#works .section_ttl--jp {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.works-accentcolor {
+  color: var(--color-orange);
+}
+
+/*============================
+Works 施工実績(spのデザイン )
+==============================*/
+@media (max-width: 767px) {
+  #works .works_wrapper {
+    flex-direction: column-reverse;
+  }
+
+  #works .works_wrapper--text,
+  #works .works_wrapper-media {
+    flex: none;
+    width: 100%;
+  }
+
+  #works .works_wrapper-media {
+    margin-left: -3rem;
+    margin-right: -3rem;
+  }
+
+  #works .works_wrapper-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  /* 余白なく画像を表示 */
+  #works .works_wrapper-media {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  #works .works-btn {
+    margin-top: 4rem;
+  }
+  #works .section_text {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+
+  #works .section__ttl {
+    margin-top: 6rem;
+  }
+}
+/*============================
+company(会社案内）
+==============================*/
+
+.p-company {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-image: url(../images/top/company/company.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media (max-width: 767px) {
+  .p-company {
+    background-image: url(../images/top/company/company_sp.jpg);
+  }
+}
+.company-innner-wrapper {
+  max-width: 1080px;
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .company-innner-wrapper {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    flex-direction: column;
+  }
+}
+.company_textArea {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  gap: 17rem;
+  padding-top: 23rem;
+  padding-bottom: 8rem;
+}
+@media (max-width: 767px) {
+  .company_textArea {
+    flex-direction: column;
+    padding-top: 16rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .company_textArea {
+    gap: 0rem;
+  }
+}
+
+.company_ttl {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-top: -6rem;
+}
+@media (max-width: 767px) {
+  .company_ttl {
+    font-size: 2.2rem;
+    margin-top: 0rem;
+  }
+}
+
+.company_desc {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 7rem;
+}
+
+@media (max-width: 767px) {
+  .company_desc {
+    font-size: 1.6rem;
+    margin-top: 4rem;
+  }
+}
+
+.company_desc--second {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .company_desc--second {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+}
+
+.company-btn {
+  text-align: right;
+  padding-top: 4rem;
+}
+
+@media (max-width: 767px) {
+  .company-btn {
+    text-align: center;
+  }
+}
+/*============================
+recruit （採用情報）
+==============================*/
+.p-recruit {
+  display: grid;
+  background-color: var(--color-beige);
+  padding: 5rem 3rem;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+}
+@media (max-width: 767px) {
+  .p-recruit {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 6rem 3rem;
+  }
+}
+
+.p-recruit__desc__wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%; /* 画像と高さを合わせる */
+}
+
+.p-recruit__img {
+  margin: auto;
+}
+
+.p-recruit__img img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 3; /* 400×300 */
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition:
+    width 0.4s ease,
+    aspect-ratio 0.4s ease;
+}
+
+@media (max-width: 767px) {
+  .p-recruit__img img {
+    max-width: 265px;
+    aspect-ratio: 265 / 200;
+  }
+}
+.recruit-media-text__title {
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .recruit-media-text__title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+.br_sp {
+  display: none;
+}
+@media (max-width: 767px) {
+  .br_sp {
+    display: inline;
+  }
+}
+.blue {
+  color: var(--color-blue);
+}
+.orange {
+  color: var(--color-orange);
+}
+.recruit-text {
+  font-size: 2rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+}
+@media (max-width: 767px) {
+  .recruit-text {
+    font-size: 1.6rem;
+  }
+}
+
+.recruit-media-text__text--second {
+  padding-top: 2rem;
+}
+
+.recruit-btn {
+  padding-top: 2rem;
+}
+@media (max-width: 767px) {
+  .recruit-btn {
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #recruit.section {
+    margin-top: 0;
+  }
+}
+
+/*============================
+footerとセクション間の余白
+（トップページ限定）
+==============================*/
+.top {
+  padding-bottom: 8rem;
+}
+@media (max-width: 767px) {
+  .top {
+    padding-bottom: 6rem;
+  }
+}
