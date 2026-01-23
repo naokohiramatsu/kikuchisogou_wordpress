@@ -118,9 +118,13 @@
     <ol class="breadcrumb__list ">
       <li class="breadcrumb__item">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-          <img src="images/common/home-icon.svg" alt="" class="breadcrumb__icon">
+          <img
+            src="<?php echo esc_url(get_template_directory_uri() . '/images/common/home-icon.svg'); ?>"
+            alt=""
+            class="breadcrumb__icon">
           <span class="sr-only">ホーム</span>
         </a>
+
       </li>
 
       <li class="breadcrumb__item">
