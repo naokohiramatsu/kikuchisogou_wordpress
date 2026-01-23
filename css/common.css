@@ -644,8 +644,8 @@ footer(pc)
 パンくずリスト
 ====================*/
 .breadcrumb {
-  margin-top: 8rem; /* コンテンツとの距離 */
-  margin-bottom: 2rem; /* footer に近づきすぎない */
+  margin-top: 8rem;
+  margin-bottom: 2rem;
 }
 
 .breadcrumb__list {
