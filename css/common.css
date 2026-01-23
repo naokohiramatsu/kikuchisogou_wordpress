@@ -678,4 +678,7 @@ footer(pc)
 .breadcrumb__item a {
   text-decoration: none;
   color: var(--color-bk);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
