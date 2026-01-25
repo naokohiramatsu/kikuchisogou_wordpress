@@ -203,7 +203,7 @@
               お客様に信頼される仕事をすること。<br />
               それが、創業以来変わらぬ当社の姿勢です。
             </p>
-            <br />
+
             <p class="company_desc sp_only company_desc--second">
               設備は見えにくいからこそ、<br />
               真面目に、確実に。<br />
