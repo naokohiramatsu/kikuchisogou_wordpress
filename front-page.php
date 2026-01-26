@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="top">
+<main class="top l-container">
   <!-- ファーストビュー-->
   <div class="fv">
     <div class="p-fv">
@@ -38,7 +38,7 @@
   </div>
 
   <!--about当社について-->
-  <section class="section l-container" id="about">
+  <section class="section" id="about">
     <div class="p-about l-content">
       <h2 class="section__ttl">
         <span class="section_ttl--en">About</span>
@@ -135,7 +135,7 @@
   </section>
 
   <!--works施工事例-->
-  <section class="section l-container l-content" id="works">
+  <section class="section l-content" id="works">
     <div class="works_wrapper">
       <div class="works_wrapper--text">
         <h2 class="section__ttl">
