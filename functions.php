@@ -23,6 +23,10 @@
     'theme-page',
     get_template_directory_uri() . '/css/page.css'
   );
+    wp_enqueue_style(
+    'theme-news',
+    get_template_directory_uri() . '/css/news.css'
+  );
 
   // JS
   wp_enqueue_script(
@@ -34,3 +38,18 @@
   );
 }
 add_action('wp_enqueue_scripts', 'theme_assets');
+
+  // 最新情報
+function register_news_post_type() {
+  register_post_type('news', [
+    'label' => '最新情報',
+    'public' => true,
+    'has_archive' => true,
+    'menu_position' => 5,
+    'supports' => ['title', 'editor'],
+    'rewrite' => ['slug' => 'news'],
+  ]);
+}
+add_action('init', 'register_news_post_type');
+
+
