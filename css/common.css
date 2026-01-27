@@ -34,10 +34,23 @@ body {
   padding: 0 3rem;
   width: 100%;
 }
+@media (max-width: 767px) {
+.l-container {
+padding: 0;}
+}
+
+
+
 .l-content {
   max-width: 1080px;
   margin: auto;
 }
+
+@media (max-width: 767px) {
+.l-content {
+padding: 0 3rem;}
+}
+
 p {
   letter-spacing: 0.03em;
 }
@@ -611,6 +624,17 @@ footer(pc)
   color: var(--color-white);
   text-decoration: none;
 }
+.footer_item--information-bottom {
+  align-items: center;
+}
+
+.privacypolicy a,
+.copyright {
+  line-height: 3;
+}
+
+
+
 
 /*===================
 各セクション詳細ページ

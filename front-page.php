@@ -72,7 +72,7 @@
 
   <!--services事業内容-->
   <section class="section" id="services">
-    <div class="p-services">
+    <div class="p-services l-content">
       <h2 class="section__ttl">
         <span class="section_ttl--en">Services</span>
         <span class="section_ttl--jp">当社が提供する主なサービス</span>
