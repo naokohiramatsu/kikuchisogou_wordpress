@@ -4,6 +4,8 @@
 
 .p-fv {
   position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .fv-img img {
@@ -98,6 +100,8 @@ Services 事業内容
   padding-top: 8rem;
   padding-bottom: 8rem;
   background-color: var(--color-beige);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 @media (max-width: 767px) {
   #services {
@@ -109,8 +113,7 @@ Services 事業内容
 .p-services {
   max-width: 1080px;
   margin: auto;
-  padding-left: 3rem;
-  padding-right: 3rem;
+
 }
 .img-box {
   width: 100%;
@@ -407,6 +410,8 @@ recruit （採用情報）
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 6rem 3rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
   }
 }
 

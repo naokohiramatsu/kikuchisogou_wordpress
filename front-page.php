@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="top">
+<main class="top l-container">
   <!-- ファーストビュー-->
   <div class="fv">
     <div class="p-fv">
@@ -38,7 +38,7 @@
   </div>
 
   <!--about当社について-->
-  <section class="section l-container" id="about">
+  <section class="section" id="about">
     <div class="p-about l-content">
       <h2 class="section__ttl">
         <span class="section_ttl--en">About</span>
@@ -72,7 +72,7 @@
 
   <!--services事業内容-->
   <section class="section" id="services">
-    <div class="p-services">
+    <div class="p-services l-content">
       <h2 class="section__ttl">
         <span class="section_ttl--en">Services</span>
         <span class="section_ttl--jp">当社が提供する主なサービス</span>
@@ -135,7 +135,7 @@
   </section>
 
   <!--works施工事例-->
-  <section class="section l-container l-content" id="works">
+  <section class="section l-content" id="works">
     <div class="works_wrapper">
       <div class="works_wrapper--text">
         <h2 class="section__ttl">
@@ -203,7 +203,7 @@
               お客様に信頼される仕事をすること。<br />
               それが、創業以来変わらぬ当社の姿勢です。
             </p>
-            <br />
+
             <p class="company_desc sp_only company_desc--second">
               設備は見えにくいからこそ、<br />
               真面目に、確実に。<br />
