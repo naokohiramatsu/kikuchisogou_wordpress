@@ -1,0 +1,95 @@
+/*============================
+news 最新情報 front-page
+==============================*/
+.news-count {
+    text-align: center;
+}
+.news-count-viewmore {
+    padding: 2rem 4rem;
+    background-color: red;
+    display: block;
+    width: fit-content;
+    margin: 5rem auto;
+    background-color: var(--color-grey);
+    border-radius: 5px;
+}
+.news-count-viewmore a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+/*============================
+news 最新情報 archive-news
+==============================*/
+.section__ttl__news {
+    display: flex;
+    flex-direction: column;
+}
+.news-item {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: solid 1px #CBCBCB;
+    padding: 2rem 0;
+}
+.section__ttl__news--en {
+    font-size: 2rem;
+    color: #b4b4b4;
+    font-weight: 600;
+}
+.section__ttl__news--jp {
+    font-size: 3.6rem;
+}
+.news-item__link {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+.news-item__link:hover {
+    opacity: 0.7;
+}
+/*============================
+news 最新情報 single-news
+==============================*/
+.news-single__header {
+    margin-bottom: 3rem;
+}
+.news-single__date {
+    display: block;
+    color: #888;
+    margin-bottom: 0.8rem;
+}
+.news-single__title {
+    font-size: 2.4rem;
+    line-height: 1.4;
+}
+.news-single__content {
+    padding: 5rem 0 10rem;
+}
+.news-single__back {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 10rem;
+    padding: 2rem;
+    background-color: var(--color-bk);
+}
+.news-single__back a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+/*===================
+ページネーション
+====================*/
+.pagination {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+.pagination .page-numbers {
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+.pagination .current {
+    font-weight: bold;
+}

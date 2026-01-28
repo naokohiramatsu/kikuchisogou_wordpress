@@ -277,6 +277,64 @@
       </div>
     </div>
   </section>
+
+  <!--news 最新情報-->
+<section class="section l-content" id="news">
+  <div class="p-news">
+
+    <h2 class="section__ttl__news">
+      <span class="section__ttl__news--en">News</span>
+      <span class="section__ttl__news--jp">最新情報</span>
+    </h2>
+
+    <?php
+    // ▼ クエリ
+    $posts_per_page = 5;
+
+    $args = [
+      'post_type'      => 'news',
+      'posts_per_page' => $posts_per_page,
+    ];
+
+    $news_query = new WP_Query($args);
+    ?>
+
+    <?php
+    // ▼ 件数計算
+    $total_posts = $news_query->found_posts;
+    $total_pages = ceil($total_posts / get_option('posts_per_page'));
+    ?>
+
+   
+
+    <?php if ($news_query->have_posts()) : ?>
+      <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+        <article class="news-item">
+          <a href="<?php the_permalink(); ?>" class="news-item__link">
+            <time class="news-item__date"><?php the_time('Y.m.d'); ?></time>
+            <h3 class="news-item__title"><?php the_title(); ?></h3>
+          </a>
+        </article>
+      <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
+
+ <!-- ▼ 件数表示 -->
+    <p class="news-count">
+      <?php echo '1 / ' . esc_html($total_pages); ?>
+    </p>
+<div class="news-count-viewmore">
+<a href="<?php echo esc_url(get_post_type_archive_link('news')); ?>">
+  一覧を見る 
+</a>
+</div>
+
+  </div>
+</section>
+
+
+
+
 </main>
 <?php get_footer(); ?>
 
