@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<main class="l-content">
+<main class=" news-detail l-container">
 
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
 
-    <article class="news-single">
+    <article class="news-single l-content">
 
       <header class="news-single__header">
         <time class="news-single__date">
@@ -21,8 +21,8 @@
       </div>
 
       <div class="news-single__back">
-        <a href="<?php echo get_post_type_archive_link('news'); ?>">
-          ← 一覧へ戻る
+         <a href="<?php echo esc_url( home_url('/#news') ); ?>">
+       News TOPへ戻る ＞
         </a>
       </div>
 

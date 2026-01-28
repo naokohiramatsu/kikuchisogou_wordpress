@@ -323,11 +323,11 @@
     <p class="news-count">
       <?php echo '1 / ' . esc_html($total_pages); ?>
     </p>
-
+<div class="news-count-viewmore">
 <a href="<?php echo esc_url(get_post_type_archive_link('news')); ?>">
-  一覧を見る →
+  一覧を見る 
 </a>
-
+</div>
 
   </div>
 </section>
